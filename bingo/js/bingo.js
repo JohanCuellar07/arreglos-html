@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', function(){
     let interno = [];
     let arregloCabeza = [];
     let colColors = [];
-    let acumulador = 0;
     let iterarF;
     let iterarC;
     let iterarH;
@@ -21,7 +20,6 @@ document.addEventListener('DOMContentLoaded', function(){
     for (iterarF = 0; iterarF < 5; iterarF++) {
         interno = [];
         for (iterarC = 0; iterarC < 5; iterarC++) {
-            acumulador = acumulador + 1;
             num = Math.floor(Math.random() * (99 - 10 + 1)+ 10);
             interno.push(num);
         }
