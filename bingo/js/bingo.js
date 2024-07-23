@@ -214,4 +214,40 @@ document.addEventListener('DOMContentLoaded', function(){
     impResultado += '</div>';
 
     document.getElementById('bingoX').innerHTML = impResultado;
+
+    //  X Grande
+
+    impResultado = '';
+
+    impResultado += '<div class="card" style="width: 22rem">';
+    impResultado += '<div class="card-header cabeza">';
+    impResultado += '<div class="row">';
+    for (iterarH = 0; iterarH < arregloCabeza.length; iterarH++) {
+        impResultado += '<div class="col text-center">'+arregloCabeza[iterarH]+'</div>';        
+    }
+    impResultado += '</div>';
+    impResultado += '</div>';
+    impResultado += '<div class="card-body">';
+    for (iterarF = 0; iterarF < bingo.length; iterarF++) {
+        impResultado += '<div class="row">';
+        for (iterarC = 0; iterarC < bingo.length; iterarC++) {
+            resaltadoClase = '';
+            if ((iterarF === 0 && iterarC === 0) || (iterarF === 0 && iterarC === 4) ||
+                (iterarF === 1 && iterarC === 1) || (iterarF === 1 && iterarC === 3) ||
+                (iterarF === 2 && iterarC === 2) || 
+                (iterarF === 3 && iterarC === 1) || (iterarF === 3 && iterarC === 3) ||
+                (iterarF === 4 && iterarC === 0) || (iterarF === 4 && iterarC === 4))  {
+                    resaltadoClase = 'resaltado';
+            }
+            else{
+                resaltadoClase = '';
+            }
+            impResultado += '<div class="col text-center num '+resaltadoClase+'">'+bingo[iterarF][iterarC]+'</div>';
+        }
+        impResultado += '</div>';
+    }
+    impResultado += '</div>';
+    impResultado += '</div>';
+
+    document.getElementById('bingoXBig').innerHTML = impResultado;
 })
