@@ -1,0 +1,55 @@
+.num{
+    font-size: 25px;
+    border: 1px solid #00000078;
+    margin: 1px;
+}
+
+body{
+    background-color: rgba(0, 0, 0, 0.694);
+}
+
+.contenedor{
+    width: 600px;
+    text-align: center;
+    display: flex;
+}
+
+.col-7{
+    display: flex;
+}
+
+.cabeza{
+    background-color: #aa00ff;
+    color: #ffffff;
+    font-size: 1cm;
+    font-weight: 500;
+}
+
+.card{
+    margin: 5px;
+}
+
+.col-b {
+    background-color: #babdde;
+}
+
+.col-i {
+    background-color: #7a7fad;
+}
+
+.col-n {
+    background-color: #303564;
+
+}
+
+.col-g {
+    background-color: #273085;
+}
+
+.col-o {
+    background-color: #202fba;
+}
+
+.resaltado {
+    background-color:#20ba6d;
+}
