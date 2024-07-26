@@ -14,6 +14,12 @@ document.addEventListener('DOMContentLoaded', function(){
     let iterarH;
     let impResultado = '';
     let resaltadoClase;
+    let posF;
+    let posC;
+    let posF1;
+    let posC1;
+    let posF2;
+    let posC2;
     
     arregloCabeza = ['B', 'I', 'N', 'G', 'O'];
     
@@ -80,6 +86,8 @@ document.addEventListener('DOMContentLoaded', function(){
     //  X1
 
     impResultado = '';
+    posF = 0;
+    posC = 0;
 
     impResultado += '<div class="card" style="width: 22rem">';
     impResultado += '<div class="card-header cabeza">';
@@ -94,9 +102,9 @@ document.addEventListener('DOMContentLoaded', function(){
         impResultado += '<div class="row">';
         for (iterarC = 0; iterarC < bingo.length; iterarC++) {
             resaltadoClase = '';
-            if ((iterarF === 0 && iterarC === 0) || (iterarF === 0 && iterarC === 2) ||
-                (iterarF === 1 && iterarC === 1) ||
-                (iterarF === 2 && iterarC === 0) || (iterarF === 2 && iterarC === 2)) {
+            if ((iterarF === posF && iterarC === posC) || (iterarF === posF && iterarC === posC + 2) ||
+                (iterarF === posF + 1 && iterarC === posC + 1) ||
+                (iterarF === posF + 2 && iterarC === posC) || (iterarF === posF + 2 && iterarC === posC + 2)) {
                     resaltadoClase = 'resaltado';
             }
             else{
@@ -114,6 +122,8 @@ document.addEventListener('DOMContentLoaded', function(){
     //  X2
 
     impResultado = '';
+    posF = 0;
+    posC = 2;
 
     impResultado += '<div class="card" style="width: 22rem">';
     impResultado += '<div class="card-header cabeza">';
@@ -128,9 +138,9 @@ document.addEventListener('DOMContentLoaded', function(){
         impResultado += '<div class="row">';
         for (iterarC = 0; iterarC < bingo.length; iterarC++) {
             resaltadoClase = '';
-            if ((iterarF === 0 && iterarC === 2) || (iterarF === 0 && iterarC === 4) ||
-                (iterarF === 1 && iterarC === 3) ||
-                (iterarF === 2 && iterarC === 2) || (iterarF === 2 && iterarC === 4)) {
+            if ((iterarF === posF && iterarC === posC) || (iterarF === posF && iterarC === posC + 2) ||
+                (iterarF === posF + 1 && iterarC === posC + 1) ||
+                (iterarF === posF + 2 && iterarC === posC) || (iterarF === posF + 2 && iterarC === posC + 2)) {
                     resaltadoClase = 'resaltado';
             }
             else{
@@ -148,6 +158,8 @@ document.addEventListener('DOMContentLoaded', function(){
     //  X3
 
     impResultado = '';
+    posF = 2;
+    posC = 0;
 
     impResultado += '<div class="card" style="width: 22rem">';
     impResultado += '<div class="card-header cabeza">';
@@ -162,9 +174,9 @@ document.addEventListener('DOMContentLoaded', function(){
         impResultado += '<div class="row">';
         for (iterarC = 0; iterarC < bingo.length; iterarC++) {
             resaltadoClase = '';
-            if ((iterarF === 2 && iterarC === 0) || (iterarF === 2 && iterarC === 2) ||
-                (iterarF === 3 && iterarC === 1) ||
-                (iterarF === 4 && iterarC === 0) || (iterarF === 4 && iterarC === 2)) {
+            if ((iterarF === posF && iterarC === posC) || (iterarF === posF && iterarC === posC + 2) ||
+                (iterarF === posF + 1 && iterarC === posC + 1) ||
+                (iterarF === posF + 2 && iterarC === posC) || (iterarF === posF + 2 && iterarC === posC + 2)) {
                     resaltadoClase = 'resaltado';
             }
             else{
@@ -218,6 +230,10 @@ document.addEventListener('DOMContentLoaded', function(){
     //  X Grande
 
     impResultado = '';
+    posF1 = 2;
+    posC1 = 0;
+    posF2 = 2;
+    posC2 = 4;
 
     impResultado += '<div class="card" style="width: 22rem">';
     impResultado += '<div class="card-header cabeza">';
@@ -232,11 +248,11 @@ document.addEventListener('DOMContentLoaded', function(){
         impResultado += '<div class="row">';
         for (iterarC = 0; iterarC < bingo.length; iterarC++) {
             resaltadoClase = '';
-            if ((iterarF === 0 && iterarC === 0) || (iterarF === 0 && iterarC === 4) ||
-                (iterarF === 1 && iterarC === 1) || (iterarF === 1 && iterarC === 3) ||
-                (iterarF === 2 && iterarC === 2) || 
-                (iterarF === 3 && iterarC === 1) || (iterarF === 3 && iterarC === 3) ||
-                (iterarF === 4 && iterarC === 0) || (iterarF === 4 && iterarC === 4))  {
+            if ((iterarF === posF1 && iterarC === posC1) || (iterarF === posF2 && iterarC === posC2) ||
+                (iterarF === posF1 + 1 && iterarC === posC1 + 1) || (iterarF === posF2 + 1 && iterarC === posC2 - 1) ||
+                (iterarF === posF1 + 2 && iterarC === posC1 + 2) || (iterarF === posF2 + 2 && iterarC === posC2 - 2) ||
+                (iterarF === posF1 + 3 && iterarC === posC1 + 3) || (iterarF === posF2 + 3 && iterarC === posC2 - 3) ||
+                (iterarF === posF1 + 4 && iterarC === posC1 + 4) || (iterarF === posF2 + 4 && iterarC === posC2 - 4)) {
                     resaltadoClase = 'resaltado';
             }
             else{
